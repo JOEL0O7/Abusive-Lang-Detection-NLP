@@ -1,0 +1,73 @@
+/* styles.css */
+body {
+    background-color: #f0f4f8; /* Light background */
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+.heading {
+    text-align: left; /* Corrected the syntax */
+}
+
+.container {
+    border-radius: 20px;
+    background-color: #ffffff; /* White container */
+    border: 2px solid #333;
+    max-width: 800px;
+    margin: 40px auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+button {
+    padding: 10px; /* Padding of 10px */
+    background-color: #000000; /* Black button */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #ff6b81; /* Lighter color on hover */
+}
+
+h2 {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.row, .col {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    background-color: #2ed573; /* Soft green */
+    border-radius: 15px;
+    border: 1px solid #d63031; /* Darker border */
+    padding: 15px; /* Add padding */
+}
+
+.row {
+    width: 250px;
+    height: auto; /* Let height be dynamic */
+    text-align: center;
+}
+
+.col {
+    width: 410px;
+    height: auto; /* Let height be dynamic */
+    text-align: center;
+}
+
+/* New styles for the side division */
+.side-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px; /* Spacing from the main container */
+    width: 300px; /* Adjust width as necessary */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #333; /* Optional border */
+    padding: 15px; /* Padding inside the side container */
+}
+

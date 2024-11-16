@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abusive Language Detection</title>
+    <link rel="stylesheet" href={{ url_for("static", filename="css/styles.css") }}>
+</head>
+<body>
+<div class="container">
+    <h1 class="heading">Abusive Language Detection</h1>
+    <form method="POST">
+        <textarea name="text" rows="5" cols="50" placeholder="Enter text here..."></textarea><br><br>
+        <button type="submit" value="Check"><b>Predict</b></button>
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <p style="text-align: left; margin-left: 30px;"><strong>Text:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ result.text }}</p>
+        <p style="text-align: left; margin-left: 30px;"><strong>Prediction:</strong>&nbsp;&nbsp;&nbsp;&nbsp; {{ result.prediction }}</p>
+        <hr>
+        <div class="row">
+            <h3>Performance Metrics:</h3><hr>
+            <p><strong>Accuracy:</strong> {{ result.accuracy }}</p>
+            <p><strong>Precision:</strong> {{ result.precision }}</p>
+            <p><strong>F1 Score:</strong> {{ result.f1_score }}</p>
+        </div>
+        <div class="col">
+            <h3>Classification Report:</h3><hr>
+            <pre>{{ result.classification_report }}</pre>
+        </div>
+    {% endif %}
+</div>
+
+<!-- New side container for displaying results -->
+{% if result %}
+<div class="side-container">
+    <h3>Additional Info:</h3>
+    <p>Some additional content can go here.</p>
+    <!-- You can populate this with more information as needed -->
+</div>
+{% endif %}
+</body>
+</html>
+
